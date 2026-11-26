@@ -270,7 +270,8 @@ export function shareText(recipe, lang = 'en', code = encodeRecipe(recipe)) {
 export function titleFrom(prompt) {
   const s = String(prompt ?? '').replace(/\s+/g, ' ').trim();
   const clause = s.split(/[，。,.:：;；!?！？\n]/)[0] || s;
-  if (CJK_RE.test(clause)) return clause.slice(0, 16);
+  // Chinese or Japanese by how the clause starts; an English prompt naming a Chinese city is still English.
+  if (CJK_RE.test(clause.replace(/^[\s"'“‘(（【\[]+/, '').charAt(0))) return clause.slice(0, 16);
   const words = clause.split(' ').slice(0, 6).join(' ');
   return words.length > 40 ? `${words.slice(0, 39)}…` : words;
 }
