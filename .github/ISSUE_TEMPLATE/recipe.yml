@@ -1,0 +1,47 @@
+name: 分享一个玩法 · Share a recipe
+description: 投稿一个 DSH Images 玩法（配方）。审核通过后，所有订阅社区源的人都能在「玩法」里看到它。Submit a recipe for DSH Images; once reviewed, everyone following the community source sees it.
+title: "[配方] "
+labels: ["recipe"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        从 Images 面板的「玩法 → 某个我的玩法 → 分享到社区」打开这个页面时，配方已经填好了；手动投稿的话，把「复制配方串」得到的整段文字粘贴到下面。
+        Opened from Images → Recipes → one of yours → Share to community, the recipe is already filled in; otherwise paste what "Copy recipe code" gave you.
+
+        这个 issue 会一直开着，作为这个玩法的主页：👍 是投票，用它画的作品可以贴在评论里。
+        This issue stays open as the recipe's home: 👍 is a vote, and pictures made with it go in the comments.
+  - type: textarea
+    id: recipe
+    attributes:
+      label: 配方 · Recipe
+      description: 配方串（dshimg1.…）或配方的 JSON。A recipe code (dshimg1.…) or the recipe's JSON.
+      placeholder: dshimg1.…
+    validations:
+      required: true
+  - type: textarea
+    id: cover
+    attributes:
+      label: 封面 · Cover
+      description: 把一张用这个玩法画的图拖进来（PNG / JPEG / WebP，8 MB 以内）。Drag in a picture made with this recipe (PNG, JPEG or WebP, up to 8 MB).
+      placeholder: 拖一张图进来 · drop an image here
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: 说明 · Notes
+      description: 可选：用哪个模型试过、适合什么、灵感来源。Optional: which model you tried it with, what it suits, where the idea came from.
+    validations:
+      required: false
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 确认 · Agreement
+      options:
+        - label: 这是我自己写的，或者我注明了出处且原作的许可允许这样分享。I wrote it, or I credited its source and that source's licence allows this.
+          required: true
+        - label: 我同意这个配方和封面以 CC BY 4.0 发布。I agree to publish this recipe and its cover under CC BY 4.0.
+          required: true
+        - label: 它不涉及真实公众人物、不点名受版权保护的角色或品牌、没有色情暴力内容。It involves no real public figures, names no copyrighted characters or brands, and has no sexual or violent content.
+          required: true

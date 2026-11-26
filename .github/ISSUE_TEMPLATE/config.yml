@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Images 插件的问题 · Problems with the Images plugin
+    url: https://github.com/kadaliao/dsh-images/issues
+    about: 插件本身的 bug 和建议请到插件仓库。Bugs and ideas for the plugin itself go to its own repository.

@@ -1,0 +1,14 @@
+{
+  "name": "dsh-images-recipes",
+  "private": true,
+  "type": "module",
+  "description": "Community recipes for DSH Images: the index the plugin reads, and the scripts that take submissions in.",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "index": "node scripts/build-index.mjs"
+  },
+  "dependencies": {
+    "sharp": "0.35.5"
+  },
+  "license": "MIT"
+}
