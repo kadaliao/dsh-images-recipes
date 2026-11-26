@@ -1,0 +1,47 @@
+{
+  "id": "neon-sign-night",
+  "title": {
+    "zh": "雨夜霓虹招牌",
+    "en": "Neon sign on a rainy night"
+  },
+  "summary": {
+    "zh": "红砖墙上的手写体霓虹灯字，雨后街面拉出长长的倒影",
+    "en": "A hand-lettered neon sign on a brick wall, mirrored in a rain-wet street"
+  },
+  "category": "illustration",
+  "tags": [
+    "neon",
+    "night",
+    "typography",
+    "photo-real"
+  ],
+  "inputs": [],
+  "slots": [
+    {
+      "name": "text",
+      "label": {
+        "zh": "灯牌上的字",
+        "en": "The words on the sign"
+      },
+      "default": "今晚有空"
+    },
+    {
+      "name": "color",
+      "label": {
+        "zh": "霓虹颜色",
+        "en": "Neon colours"
+      },
+      "default": "hot pink and electric cyan"
+    }
+  ],
+  "prompt": "A photorealistic night scene: a glowing neon sign mounted on a weathered red-brick wall, its glass tubes spelling “{{text}}” in flowing hand-lettered brush-script, in {{color}} neon with a soft halo and a faint glow on the bricks around it. Light rain; the wet pavement below mirrors the colours in long, rippling reflections; a dark wooden doorway and two potted plants at the edge of the frame. Cinematic 35mm look, shallow depth of field, rich contrast. The lettering is crisp and spelled exactly as given; no other text, no logos.",
+  "params": {
+    "size": "1536x1024"
+  },
+  "tested": [
+    "gpt-image-2.6"
+  ],
+  "author": "github:kadaliao",
+  "issue": 1,
+  "createdAt": 1795684197000
+}
